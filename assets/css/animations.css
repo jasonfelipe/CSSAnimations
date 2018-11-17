@@ -11,14 +11,12 @@
 
 }
 
-#slide-from-left h1 {
+#slide-from-left-to-right h1 {
     position: relative;
     left: -300px;
-    animation: slide-left 0.5s forwards;
+    animation: slide-right 0.5s forwards;
     animation-delay: 5s;
 }
-
-
 
 #delay-fade {
     -webkit-animation: fadein 2s;
@@ -44,10 +42,10 @@
     animation: fadeout 5s forwards;
 }
 
-#slide-from-right {
+#slide-from-right-to-left {
     position: relative;
     right:-100px;
-    animation: slide-right 0.5s forwards;
+    animation: slide-left 3s forwards;
     animation-delay: 5s;
 }
 
@@ -56,6 +54,7 @@ p:hover {
     animation: fadeout 2s;
 }
 
+input{display:none}
 #combo {
     animation-name: fadeout, slide-return-right;
     animation-delay: .5s, .5s;
@@ -68,7 +67,9 @@ p:hover {
     -webkit-animation-name: fadeout, slide-return-left;
 }
 
-#combo:hover {
+
+
+input:checked + #combo {
     /* Combining multiple animations together. */
     animation-name: fadein, slide-right;
     animation-delay: .5s, .5s;
@@ -81,7 +82,6 @@ p:hover {
     -webkit-animation-duration: 5s, 3s;
     -webkit-animation-name: fadein, slide-right;
 }
-
 
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -224,13 +224,13 @@ p:hover {
 
 @-webkit-keyframes slide-return-left {
     0% { left: 0; }
-    100% { left: -100px;}
+    100% { left: -200px;}
 
 }
 
 @keyframes slide-return-left {
     0% { left: 0; }
-    100% { left: -100px;}
+    100% { left: -200px;}
 
 }
 

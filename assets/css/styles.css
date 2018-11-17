@@ -3,6 +3,11 @@ body {
     color: rgb(255, 245, 104);
 }
 
+.typewrite {
+    color: rgb(255, 245, 104);
+    text-decoration: none;
+}
+
 #fade-in p {
     margin-top: 25px;
     font-size: 21px;
@@ -14,6 +19,10 @@ body {
     opacity: 0;
     position:relative;
     left:-300px;
+}
+
+#combo:hover {
+    cursor: pointer;
 }
 
 .centered {
