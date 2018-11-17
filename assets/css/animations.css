@@ -1,0 +1,252 @@
+#fade-in p {
+    -webkit-animation: fadein 2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2s;
+    /* Internet Explorer */
+    -o-animation: fadein 2s;
+    /* Opera < 12.1 */
+    animation: fadein 2s;
+
+}
+
+#slide-from-left h1 {
+    position: relative;
+    left: -300px;
+    animation: slide-left 0.5s forwards;
+    animation-delay: 5s;
+}
+
+
+
+#delay-fade {
+    -webkit-animation: fadein 2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2s;
+    /* Internet Explorer */
+    -o-animation: fadein 2s;
+    /* Opera < 12.1 */
+    animation: fadein 10s;
+}
+
+#fade-out {
+    -webkit-animation: fadeout 2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeout 2s;
+    /* Firefox < 16 */
+    -ms-animation: fadeout 2s;
+    /* Internet Explorer */
+    -o-animation: fadeout 2s;
+    /* Opera < 12.1 */
+    animation: fadeout 5s forwards;
+}
+
+#slide-from-right {
+    position: relative;
+    right:-100px;
+    animation: slide-right 0.5s forwards;
+    animation-delay: 5s;
+}
+
+
+p:hover {
+    animation: fadeout 2s;
+}
+
+#combo {
+    animation-name: fadeout, slide-return-right;
+    animation-delay: .5s, .5s;
+    animation-duration: 2s, 3s;
+    animation-fill-mode: forwards;
+    
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: .5s, .5s;
+    -webkit-animation-duration: 5s, 3s;
+    -webkit-animation-name: fadeout, slide-return-left;
+}
+
+#combo:hover {
+    /* Combining multiple animations together. */
+    animation-name: fadein, slide-right;
+    animation-delay: .5s, .5s;
+    animation-duration: 2s, 3s;
+    animation-fill-mode: forwards;
+    
+    /* Safari, Chrome, Opera */
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: .5s, .5s;
+    -webkit-animation-duration: 5s, 3s;
+    -webkit-animation-name: fadein, slide-right;
+}
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ANIMATION CSS DOWN BELOW!!! */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/* ======================== */
+/* Fade In Animations Start */
+/* ======================== */
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+/* Fade In Animations End */
+
+
+/* ======================== */
+/* Fade Out Animations Start */
+/* ======================== */
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+/* Fade Out Animations End */
+
+/*===========================*/
+/* Slide Left to Right Start */
+/*===========================*/
+
+@-webkit-keyframes slide-right {
+    100% { left: 0; }
+}
+
+@keyframes slide-right {
+    100% { left: 0; }
+
+}
+
+
+@-webkit-keyframes slide-return-left {
+    0% { left: 0; }
+    100% { left: -100px;}
+
+}
+
+@keyframes slide-return-left {
+    0% { left: 0; }
+    100% { left: -100px;}
+
+}
+
+/* Slide Left to Right End */
+
+
+/*===========================*/
+/* Slide Right to Left Start */
+/*===========================*/
+
+@-webkit-keyframes slide-left {
+    100% { right: 0; }
+}
+
+@keyframes slide-left {
+    100% { right: 0; }
+}
+
+/* Slide Right to Left End */

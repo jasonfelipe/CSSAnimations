@@ -1,0 +1,78 @@
+body {
+    background: rgb(61, 43, 43);
+    color: rgb(255, 245, 104);
+}
+
+#fade-in p {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+
+}
+
+#combo {
+    opacity: 0;
+    position:relative;
+    left:-300px;
+}
+
+.centered {
+    position: absolute;
+    top: 35%;
+    right: 25%
+}
+
+.container {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* =============================== */
+/* OVERLAY TRANSITION EFFECT START */
+/* =============================== */
+
+/* This can be an image, or even a card. */
+#box{
+    margin: 0;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+}
+
+/* The Overlay that comes down */
+.overlay{
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 200px;
+    height:0;
+    transition: .5s ease;
+    margin: 0;
+}
+
+/* Styling the text on the Overlay */
+.overlay-text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+      
+}
+
+/* The Hover */
+.container:hover .overlay {
+    bottom: 0;
+    height: 100%;
+}
+
+/* OVERLAY TRANSITION END */
